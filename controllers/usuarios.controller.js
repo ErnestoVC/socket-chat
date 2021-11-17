@@ -22,7 +22,7 @@ const usuariosPut = async (req, res = response) => {
   const { id } = req.params;
   const { _id, password, google, ...resto } = req.body;
 
-  //TODO validar contra base de datos
+  //validar contra base de datos
   if (password) {
     //Encriptar la contraseña
     const salt = bcryptjs.genSaltSync();
