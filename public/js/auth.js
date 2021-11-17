@@ -1,8 +1,8 @@
 const miformulario = document.querySelector('form');
 
 const url = (window.location.hostname.includes('localhost')) ?
-    'http://localhost:8080/api/auth/' :
-    'https://socket-chat-intro.herokuapp.com/api/auth/';
+    process.env.LOCALHOST :
+    process.env.HEROURL;
 
 
 miformulario.addEventListener('submit', event => {
